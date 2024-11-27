@@ -1,0 +1,495 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling untuk mode gelap */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212; /* Latar belakang gelap */
+  color: #e0e0e0; /* Teks berwarna terang */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CSS untuk mengatur tampilan h3 */
+h3 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* CSS untuk mengatur tampilan gambar */
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bayangan lebih gelap */
+}
+
+/* Container styling */
+.container {
+  background-color: rgba(33, 33, 33, 0.9); /* Latar belakang lebih gelap dengan transparansi */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Gambar bukti tabungan */
+#list-tabungan img {
+  max-width: 50px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsif untuk layar kecil (maksimal 768px) */
+@media (max-width: 768px) {
+  #list-tabungan img {
+    max-width: 40px;
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 90%; /* Memperlebar lebar container pada layar kecil */
+  }
+
+  h3 {
+    font-size: 28px; /* Mengurangi ukuran font untuk tampilan lebih kecil */
+  }
+}
+
+/* Heading */
+h2 {
+  font-size: 2em;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Form inputs */
+form input,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Input focus styling */
+form input:focus {
+  border-color: #a18cd1;
+  box-shadow: 0 0 8px rgba(161, 140, 209, 0.5);
+}
+
+/* Placeholder styling */
+form input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Button styling */
+form button {
+  background-color: #a18cd1;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #875dc2;
+}
+
+/* Link styling */
+p a {
+  color: #a18cd1;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Hidden class for register form */
+.hidden {
+  display: none;
+}
+
+/* Styling untuk select dan textarea */
+form select,
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+/* Tombol dalam form */
+form select:focus,
+form input:focus,
+form textarea:focus {
+  border-color: #a18cd1;
+  box-shadow: 0 0 8px rgba(161, 140, 209, 0.5);
+}
+
+/* Placeholder styling untuk input dan textarea */
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Styling untuk label */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #000000;
+}
+
+/* Styling untuk textarea */
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Styling untuk select */
+form select {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+/* Styling container untuk teks berjalan */
+#welcome-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  background-color: inherit;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Styling untuk teks pada elemen welcome-message */
+#welcome-message {
+  font-size: 5vw; /* Ukuran font menyesuaikan dengan lebar layar (viewport width) */
+}
+
+/* Responsif untuk layar lebih kecil (maksimal 768px, seperti ponsel) */
+@media (max-width: 768px) {
+  #welcome-message {
+    font-size: 4vw; /* Mengurangi ukuran font pada layar kecil */
+  }
+}
+
+/* Responsif untuk layar lebih besar (minimal 1024px, seperti tablet atau desktop) */
+@media (min-width: 1024px) {
+  #welcome-message {
+    font-size: 1.5em; /* Ukuran font lebih besar pada layar lebih besar */
+  }
+}
+
+/* Styling tombol logout */
+#logout {
+  background-color: #dc3545; /* Warna merah untuk tombol logout */
+  color: white; /* Warna teks putih */
+  border: none;
+  padding: 12px 20px; /* Memberikan jarak pada tombol */
+  font-size: 16px; /* Ukuran font */
+  border-radius: 8px; /* Sudut tombol membulat */
+  cursor: pointer; /* Kursor berubah saat hover */
+  transition: background-color 0.3s, transform 0.2s; /* Efek transisi */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+}
+
+/* Efek hover pada tombol */
+#logout:hover {
+  background-color: #c82333; /* Warna saat hover (lebih gelap) */
+  transform: scale(1.05); /* Memperbesar sedikit tombol saat hover */
+}
+
+/* Efek saat tombol di tekan */
+#logout:active {
+  transform: scale(0.98); /* Menekan tombol sedikit */
+}
+
+/* List tabungan */
+#list-tabungan {
+  margin-top: 20px;
+  list-style: none;
+  text-align: justify;
+}
+
+/* Gaya untuk setiap item tabungan */
+#list-tabungan li {
+  background-color: #ffffff; /* Latar belakang putih */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Menjaga konten di sebelah kiri */
+  color: #333; /* Warna teks hitam untuk kontras */
+  font-size: 14px; /* Ukuran font lebih kecil agar rapi */
+  width: 100%; /* Agar lebar elemen mengikuti kolom */
+}
+
+/* Gaya tombol umum */
+#list-tabungan button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%; /* Tombol mengisi lebar kolom */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#list-tabungan button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Tombol "Hapus" */
+#list-tabungan button:nth-of-type(2) {
+  background-color: #dc3545;
+}
+
+#list-tabungan button:nth-of-type(2):hover {
+  background-color: #b02a37;
+}
+
+/* Tombol "Ambil Tabungan" */
+#list-tabungan button:nth-of-type(1) {
+  background-color: #28a745;
+}
+
+#list-tabungan button:nth-of-type(1):hover {
+  background-color: #218838;
+}
+
+#image-preview {
+  max-width: 100px;  /* Ukuran gambar maksimal */
+  max-height: 100px; /* Atur tinggi maksimal */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  margin-top: 20px;
+}
+
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Konten modal */
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  color: #e0e0e0;
+}
+
+/* Tombol dalam modal */
+.modal-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Tombol Batal */
+.modal-buttons button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.modal-buttons button:nth-child(2):hover {
+  background-color: #b02a37;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form input, form select, form textarea, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Daftar Tabungan */
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.saving-item {
+  flex: 1 1 calc(33.333% - 20px); /* Tiga kolom */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.saving-item img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.saving-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.saving-item button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.saving-item button:hover {
+  background-color: #218838;
+}
+
+/* Modal */
+#notifikasi-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .saving-item {
+    flex: 1 1 calc(50% - 20px); /* Dua kolom pada layar sedang */
+  }
+}
+
+@media (max-width: 480px) {
+  .saving-item {
+    flex: 1 1 100%; /* Satu kolom pada layar kecil */
+  }
+}
+footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px; /* Ukuran font default */
+}
+
+/* Responsif untuk perangkat dengan layar lebih kecil (misalnya HP) */
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 12px; /* Mengurangi ukuran font di layar kecil */
+  }
+  footer {
+    padding: 8px 0; /* Mengurangi padding di layar kecil */
+  }
+}
+
+/* Responsif untuk layar yang lebih besar (misalnya laptop) */
+@media screen and (min-width: 769px) {
+  footer p {
+    font-size: 16px; /* Ukuran font lebih besar di layar lebih besar */
+  }
+  footer {
+    padding: 12px 0; /* Menambahkan padding di layar besar */
+  }
+}
